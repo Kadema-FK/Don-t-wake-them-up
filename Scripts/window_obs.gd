@@ -45,4 +45,3 @@ func _on_timer_timeout():
 	if state == 3:
 		noise_level = 10
 	print("Noise: ", noise_level)
-	
