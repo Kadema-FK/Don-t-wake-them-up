@@ -1,19 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://mlhgidq1ow1b"]
+[gd_scene load_steps=4 format=3 uid="uid://mlhgidq1ow1b"]
 
-[ext_resource type="Texture2D" uid="uid://8qsyvny0qved" path="res://Assets/Images/Background/background_test_image.jpg" id="1_e75pv"]
 [ext_resource type="Script" path="res://Scripts/don't wake her up.gd" id="1_jhs1t"]
+[ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
+[ext_resource type="PackedScene" uid="uid://itff3ik2v57i" path="res://Scenes/obstacle.tscn" id="3_p1cf0"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jhs1t")
 
-[node name="BackgroundTestImage" type="Sprite2D" parent="."]
-position = Vector2(629.5, 310.5)
-scale = Vector2(1.57407, 1.28007)
-texture = ExtResource("1_e75pv")
+[node name="PlanszaSketch" type="Sprite2D" parent="."]
+texture = ExtResource("3_hjj7f")
+centered = false
 
 [node name="Test_Clock" type="Label" parent="."]
-offset_left = 387.0
-offset_top = 587.0
-offset_right = 628.0
-offset_bottom = 610.0
+offset_left = 41.0
+offset_top = 1027.0
+offset_right = 282.0
+offset_bottom = 1053.0
 text = "Test"
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 120.0
+
+[node name="EventTimer" type="Timer" parent="."]
+
+[node name="Obstacle" parent="." instance=ExtResource("3_p1cf0")]
+position = Vector2(1684, 281)
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="EventTimer" to="." method="_on_event_timer_timeout"]
