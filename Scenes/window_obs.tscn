@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b872cys6jdyfy"]
+[gd_scene load_steps=8 format=3 uid="uid://cwkx4xqfoj1tr"]
 
 [ext_resource type="Script" path="res://Scripts/window_obs.gd" id="1_8r6so"]
 [ext_resource type="Texture2D" uid="uid://mbsq8jaq4woj" path="res://Assets/Images/Obstacles/window.jpg" id="2_27rtw"]

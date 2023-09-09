@@ -34,6 +34,7 @@ func _on_area_2d_mouse_exited():
 
 #start being an obstacle
 func start():
+	print("Window starts");
 	$Timer.start();
 
 #return real noise level

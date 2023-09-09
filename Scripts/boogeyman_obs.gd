@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func start():
+	print("Boogy starts");
 	pass

@@ -45,6 +45,7 @@ func _on_area_2d_mouse_exited():
 
 #start being an obstacle
 func start():
+	print("Dog starts");
 	var rng_set = RandomNumberGenerator.new();
 	state_set = rng_set.randf_range(0, 1);
 	$Timer.start();
