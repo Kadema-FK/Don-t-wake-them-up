@@ -9,15 +9,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	return
+	if state == 0 or state == 1:
+		$Window_sprite/AnimationPlayer.play("0")
+	if state == 2:
+		$Window_sprite/AnimationPlayer.play("2")
+	if state == 3:
+		$Window_sprite/AnimationPlayer.play("3")
+		
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in == true:
 			print("State: ", state)
-			state = 3
-			noise_level = 0
-			$Timer.stop()
+			if state >= 2:
+				state = 0
+				noise_level = 0
+				$Timer.stop()
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;
@@ -36,12 +43,6 @@ func get_noise_level():
 
 func _on_timer_timeout():
 	state += 1
-	if state == 0 or state == 1:
-		$AnimatedSprite2D.play("open")
-	if state == 2:
-		$AnimatedSprite2D.play("open")
-	if state == 3:
-		return
 	if state == 3:
 		noise_level = 10
 	print("Noise: ", noise_level)

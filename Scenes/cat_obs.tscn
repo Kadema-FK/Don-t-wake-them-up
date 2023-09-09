@@ -561,17 +561,5 @@ script = ExtResource("1_53dp2")
 
 [node name="CatAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s1m1f")
-animation = &"sleep"
+animation = &"pac3"
 centered = false
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(1589, 645, 1493, 646, 1499, 592, 1539, 526, 1565, 504, 1573, 450, 1643, 450, 1694, 521, 1644, 584, 1675, 634, 1618, 650)
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

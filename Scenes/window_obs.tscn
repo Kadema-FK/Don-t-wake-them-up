@@ -1,33 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwkx4xqfoj1tr"]
+[gd_scene load_steps=8 format=3 uid="uid://cwkx4xqfoj1tr"]
 
 [ext_resource type="Script" path="res://Scripts/window_obs.gd" id="1_8r6so"]
 [ext_resource type="Texture2D" uid="uid://mbsq8jaq4woj" path="res://Assets/Images/Obstacles/window.jpg" id="2_27rtw"]
-[ext_resource type="Texture2D" uid="uid://bxo1kesxw4w5x" path="res://Assets/Images/Obstacles/window/okno_zamkniete.png" id="2_88j4b"]
-[ext_resource type="Texture2D" uid="uid://vcj8ojnflp44" path="res://Assets/Images/Obstacles/window/okno_otwarte.png" id="3_wb0te"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dls04"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_88j4b")
-}],
-"loop": true,
-"name": &"closed",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_wb0te")
-}],
-"loop": true,
-"name": &"open",
-"speed": 5.0
-}]
 
 [sub_resource type="Animation" id="Animation_vqcfe"]
 resource_name = "0"
@@ -103,14 +77,7 @@ _data = {
 [node name="Window" type="Node2D"]
 script = ExtResource("1_8r6so")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1, 1)
-sprite_frames = SubResource("SpriteFrames_dls04")
-animation = &"closed"
-
 [node name="Window_sprite" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(71, 78)
 rotation = 0.122173
 texture = ExtResource("2_27rtw")
@@ -123,8 +90,8 @@ libraries = {
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(1633, 291)
-polygon = PackedVector2Array(-48, -75.75, -42, 310, 185, 315, 183, -188)
+position = Vector2(71, 79.75)
+polygon = PackedVector2Array(-48, -75.75, -59, 38.25, 52, 69.25, 60, -43.75)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

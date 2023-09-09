@@ -13,8 +13,6 @@ config_version=5
 config/name="Don't Wake Them Up"
 run/main_scene="res://Scenes/don't wake her up.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-boot_splash/bg_color=Color(0.0901961, 0.0901961, 0.0901961, 1)
-boot_splash/image="res://Assets/Images/Lunch_Screen.png"
 config/icon="res://Assets/Images/icon.svg"
 
 [display]
