@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuq2wt78xos8q"]
+
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_4jr20"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eclwm"]
+blend_mode = 1
+
+[sub_resource type="Theme" id="Theme_2hulk"]
+
+[sub_resource type="SystemFont" id="SystemFont_21hrc"]
+
+[sub_resource type="Theme" id="Theme_fyh1r"]
+/fonts/Play = SubResource("SystemFont_21hrc")
+
+[node name="credits" type="Node2D"]
+script = ExtResource("1_4jr20")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_eclwm")
+offset_right = 966.0
+offset_bottom = 548.0
+scale = Vector2(2, 2)
+theme = SubResource("Theme_2hulk")
+
+[node name="Back" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 33.0
+offset_top = 478.0
+offset_right = 181.0
+offset_bottom = 509.0
+theme = SubResource("Theme_fyh1r")
+text = "Back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -214.5
+offset_right = 74.0
+offset_bottom = -113.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Overnight Oatmeal" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Overnight Oatmeal"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
