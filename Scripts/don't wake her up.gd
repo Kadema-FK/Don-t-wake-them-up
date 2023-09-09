@@ -20,6 +20,7 @@ func resetEventTimer(start, end):
 	var rng = RandomNumberGenerator.new();
 	var time = rng.randf_range(start, end);
 	print ("New time: " + str(time));
+	$Window.start();
 	$EventTimer.start(time);
 
 func _on_game_timer_timeout():
@@ -31,7 +32,6 @@ func _on_event_timer_timeout():
 	var maks_array = eventTime.size()-1;
 	#print("Maks "+str(maks_array))
 	#print ("Timeout. Game time: "+ str(hour)  + " hour: " + str($GameTimer.time_left) + "s")
-	$Obstacle.start();
 	if hour < maks_array:
 		resetEventTimer(eventTime[hour][0], eventTime[hour][1]);
 	else:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://mlhgidq1ow1b"]
 
 [ext_resource type="Script" path="res://Scripts/don't wake her up.gd" id="1_jhs1t"]
-[ext_resource type="PackedScene" uid="uid://b872cys6jdyfy" path="res://Scenes/window_obs.tscn" id="3_5nxd7"]
+[ext_resource type="PackedScene" uid="uid://b872cys6jdyfy" path="res://Scenes/window_obs.tscn" id="3_ecayh"]
 [ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
 
 [node name="Game" type="Node2D"]
@@ -23,9 +23,9 @@ wait_time = 120.0
 
 [node name="EventTimer" type="Timer" parent="."]
 
-[node name="Widnow" parent="." instance=ExtResource("3_5nxd7")]
-position = Vector2(1548, 162)
-scale = Vector2(2.48, 2.48)
+[node name="Window" parent="." instance=ExtResource("3_ecayh")]
+position = Vector2(1556, 170)
+scale = Vector2(2.28, 2.28)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="EventTimer" to="." method="_on_event_timer_timeout"]

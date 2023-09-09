@@ -10,11 +10,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if state == 0 or state == 1:
-		$Window/AnimationPlayer.play("0")
+		$Window_sprite/AnimationPlayer.play("0")
 	if state == 2:
-		$Window/AnimationPlayer.play("2")
+		$Window_sprite/AnimationPlayer.play("2")
 	if state == 3:
-		$Window/AnimationPlayer.play("3")
+		$Window_sprite/AnimationPlayer.play("3")
 		
 
 func _input(event):

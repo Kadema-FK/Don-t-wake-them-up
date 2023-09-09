@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b872cys6jdyfy"]
 
-[ext_resource type="Script" path="res://Scripts/obstacle.gd" id="1_8r6so"]
+[ext_resource type="Script" path="res://Scripts/window_obs.gd" id="1_8r6so"]
 [ext_resource type="Texture2D" uid="uid://mbsq8jaq4woj" path="res://Assets/Images/Obstacles/window.jpg" id="2_27rtw"]
 
 [sub_resource type="Animation" id="Animation_vqcfe"]
@@ -74,15 +74,15 @@ _data = {
 "RESET": SubResource("Animation_lvcdx")
 }
 
-[node name="Widnow" type="Node2D"]
+[node name="Window" type="Node2D"]
 script = ExtResource("1_8r6so")
 
-[node name="Window" type="Sprite2D" parent="."]
+[node name="Window_sprite" type="Sprite2D" parent="."]
 position = Vector2(71, 78)
 rotation = 0.122173
 texture = ExtResource("2_27rtw")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Window"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Window_sprite"]
 libraries = {
 "": SubResource("AnimationLibrary_k0cn8")
 }
