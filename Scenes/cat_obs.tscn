@@ -1,6 +1,565 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx7tvegfjs4ux"]
+[gd_scene load_steps=137 format=3 uid="uid://bmnkyni2tl0cn"]
 
 [ext_resource type="Script" path="res://Scripts/cat_obs.gd" id="1_53dp2"]
+[ext_resource type="Texture2D" uid="uid://coy6pkrcugu0l" path="res://Assets/Images/Obstacles/cat/cat_pac_2/cat2.png" id="2_tx7do"]
+[ext_resource type="Texture2D" uid="uid://daspd8cqva8gx" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0000.png" id="3_h5evr"]
+[ext_resource type="Texture2D" uid="uid://wqe4x6e8tktj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0001.png" id="4_nlq3q"]
+[ext_resource type="Texture2D" uid="uid://d4l14wb665fmq" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0002.png" id="5_pw5kr"]
+[ext_resource type="Texture2D" uid="uid://j0heh14irs4q" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0003.png" id="6_f4jmo"]
+[ext_resource type="Texture2D" uid="uid://dbnvy18k4ei88" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0004.png" id="7_oa3sj"]
+[ext_resource type="Texture2D" uid="uid://v8oitmncaa6u" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0005.png" id="8_40b7i"]
+[ext_resource type="Texture2D" uid="uid://cw00q8oj2cof0" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0006.png" id="9_jx32u"]
+[ext_resource type="Texture2D" uid="uid://dfp2qvgkoqctg" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0007.png" id="10_hrs2v"]
+[ext_resource type="Texture2D" uid="uid://c7b2186dnmnrt" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0008.png" id="11_6888v"]
+[ext_resource type="Texture2D" uid="uid://coqff3lbbr3dp" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0009.png" id="12_lft13"]
+[ext_resource type="Texture2D" uid="uid://bij6tl0wd50f1" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0010.png" id="13_it6gy"]
+[ext_resource type="Texture2D" uid="uid://d35jd34jlt5uj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0011.png" id="14_frrda"]
+[ext_resource type="Texture2D" uid="uid://bmaifn8lr7hs5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0012.png" id="15_o43xy"]
+[ext_resource type="Texture2D" uid="uid://cevp0ojmssh7s" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0013.png" id="16_tv42t"]
+[ext_resource type="Texture2D" uid="uid://mmj8l4dmbuau" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0014.png" id="17_bl66q"]
+[ext_resource type="Texture2D" uid="uid://kvesg4souicc" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0015.png" id="18_nrl4w"]
+[ext_resource type="Texture2D" uid="uid://u7xsgfojuqtp" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0016.png" id="19_wm7eb"]
+[ext_resource type="Texture2D" uid="uid://cabf8ayvesr22" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0017.png" id="20_3pcl2"]
+[ext_resource type="Texture2D" uid="uid://chanmpkvtnp1k" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0018.png" id="21_2t7dh"]
+[ext_resource type="Texture2D" uid="uid://dgykfpwf1mdcp" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0019.png" id="22_lab8l"]
+[ext_resource type="Texture2D" uid="uid://btkmsmk5wvdx5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0020.png" id="23_uscbv"]
+[ext_resource type="Texture2D" uid="uid://de0ygg2p0jcoy" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0021.png" id="24_omigr"]
+[ext_resource type="Texture2D" uid="uid://b6akdt8hlo46p" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0022.png" id="25_62y38"]
+[ext_resource type="Texture2D" uid="uid://blmugjblxqq2n" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0023.png" id="26_adxdy"]
+[ext_resource type="Texture2D" uid="uid://0dtyemipsq4" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0024.png" id="27_q06ls"]
+[ext_resource type="Texture2D" uid="uid://co6fsfpxlke01" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0025.png" id="28_utt6t"]
+[ext_resource type="Texture2D" uid="uid://cqyn6ibcl7fma" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0026.png" id="29_3ndx3"]
+[ext_resource type="Texture2D" uid="uid://cud1bv6lgxu5y" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0027.png" id="30_s5cab"]
+[ext_resource type="Texture2D" uid="uid://rttelyjsh3x0" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0028.png" id="31_wr7dj"]
+[ext_resource type="Texture2D" uid="uid://hrkgjf7hgk4f" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0029.png" id="32_rs2ln"]
+[ext_resource type="Texture2D" uid="uid://gebde22mjoq" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0030.png" id="33_0px16"]
+[ext_resource type="Texture2D" uid="uid://b1q6t5w0kym5j" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0031.png" id="34_tyf4i"]
+[ext_resource type="Texture2D" uid="uid://7cvoyrx8vujp" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0032.png" id="35_jfenw"]
+[ext_resource type="Texture2D" uid="uid://b2t0451i0tqae" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0033.png" id="36_lj0rh"]
+[ext_resource type="Texture2D" uid="uid://dl6boc1ero1di" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0034.png" id="37_mts2v"]
+[ext_resource type="Texture2D" uid="uid://ufhertokhsbi" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0035.png" id="38_5jwqa"]
+[ext_resource type="Texture2D" uid="uid://2gt8sc0642l7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0036.png" id="39_uk7o2"]
+[ext_resource type="Texture2D" uid="uid://bmkdaw4liw8l7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0037.png" id="40_0pces"]
+[ext_resource type="Texture2D" uid="uid://cfje4irmr5hka" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0038.png" id="41_ax8fp"]
+[ext_resource type="Texture2D" uid="uid://wmm3c6ivlqp4" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0039.png" id="42_mykb3"]
+[ext_resource type="Texture2D" uid="uid://dxjm0pl3qy1dk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0040.png" id="43_uy77d"]
+[ext_resource type="Texture2D" uid="uid://brt2i3fxtjc0d" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0041.png" id="44_7radx"]
+[ext_resource type="Texture2D" uid="uid://xv3re7fbvby3" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0042.png" id="45_k6xb3"]
+[ext_resource type="Texture2D" uid="uid://br23m3ii1ta84" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0043.png" id="46_tript"]
+[ext_resource type="Texture2D" uid="uid://b88a3e6vd6hm6" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0044.png" id="47_m5662"]
+[ext_resource type="Texture2D" uid="uid://cjjiipskd7mot" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0045.png" id="48_e1wxq"]
+[ext_resource type="Texture2D" uid="uid://ywatmbujmr8h" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0046.png" id="49_dwke5"]
+[ext_resource type="Texture2D" uid="uid://8b3vdlsqubd7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0047.png" id="50_67lvu"]
+[ext_resource type="Texture2D" uid="uid://jj54usmn4fdi" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0048.png" id="51_ir788"]
+[ext_resource type="Texture2D" uid="uid://72eada7cf832" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0049.png" id="52_pucso"]
+[ext_resource type="Texture2D" uid="uid://bja4x0uc3apqk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0050.png" id="53_4bbhq"]
+[ext_resource type="Texture2D" uid="uid://ng0pe31yeyrv" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0051.png" id="54_1pwkc"]
+[ext_resource type="Texture2D" uid="uid://cf6esva03wswd" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0052.png" id="55_7tjwi"]
+[ext_resource type="Texture2D" uid="uid://jsv0nhgdgusd" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0053.png" id="56_7w1k7"]
+[ext_resource type="Texture2D" uid="uid://ccs3ycs6n6gc8" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0054.png" id="57_8onyp"]
+[ext_resource type="Texture2D" uid="uid://bxuf2ql6i8xea" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0055.png" id="58_8jfo1"]
+[ext_resource type="Texture2D" uid="uid://pefnd2n1mif7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0056.png" id="59_voltd"]
+[ext_resource type="Texture2D" uid="uid://d2f8kbliadp3g" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0057.png" id="60_q8quy"]
+[ext_resource type="Texture2D" uid="uid://ca4cv1ba1cb8x" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0058.png" id="61_rntvc"]
+[ext_resource type="Texture2D" uid="uid://3g6x78vcf141" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0059.png" id="62_pkcbh"]
+[ext_resource type="Texture2D" uid="uid://bqy7unon5qp7j" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0060.png" id="63_55r1g"]
+[ext_resource type="Texture2D" uid="uid://bmskfse45dhor" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0061.png" id="64_hdrlc"]
+[ext_resource type="Texture2D" uid="uid://b3txkn63l6jyc" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0062.png" id="65_p7tkt"]
+[ext_resource type="Texture2D" uid="uid://b734oo1j15bag" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0063.png" id="66_iugin"]
+[ext_resource type="Texture2D" uid="uid://cgovrqavitet8" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0064.png" id="67_nyrag"]
+[ext_resource type="Texture2D" uid="uid://qjcehtdfdwap" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0065.png" id="68_hmfy1"]
+[ext_resource type="Texture2D" uid="uid://b07ct0vejg674" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0066.png" id="69_vm1b3"]
+[ext_resource type="Texture2D" uid="uid://j2wsdgpnjgqu" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0067.png" id="70_36gtq"]
+[ext_resource type="Texture2D" uid="uid://b3466sph8dk1b" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0068.png" id="71_xonqi"]
+[ext_resource type="Texture2D" uid="uid://c31deo08q4j46" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0069.png" id="72_fohn7"]
+[ext_resource type="Texture2D" uid="uid://bdctup6nb0sln" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0070.png" id="73_dpetl"]
+[ext_resource type="Texture2D" uid="uid://cm565lonxg7yi" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0071.png" id="74_f8owb"]
+[ext_resource type="Texture2D" uid="uid://d2gk4stl0cbf5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0072.png" id="75_5bwhr"]
+[ext_resource type="Texture2D" uid="uid://cern3qqhy8mdr" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0073.png" id="76_inpwy"]
+[ext_resource type="Texture2D" uid="uid://dje6yrfas6br1" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0074.png" id="77_q6gff"]
+[ext_resource type="Texture2D" uid="uid://dgbhg8sb2dqo5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0075.png" id="78_km647"]
+[ext_resource type="Texture2D" uid="uid://cpmltsnh2bl18" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0076.png" id="79_oikj6"]
+[ext_resource type="Texture2D" uid="uid://s2p1annnhrlp" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0077.png" id="80_bofjm"]
+[ext_resource type="Texture2D" uid="uid://cchggs7ccttjj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0078.png" id="81_oiayo"]
+[ext_resource type="Texture2D" uid="uid://co66xa0j5u4f5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0079.png" id="82_ti5su"]
+[ext_resource type="Texture2D" uid="uid://bie6uoyjpbh2x" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0080.png" id="83_pygg7"]
+[ext_resource type="Texture2D" uid="uid://b35tcrrf4rd1e" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0081.png" id="84_svotw"]
+[ext_resource type="Texture2D" uid="uid://2qeon1ap6xoi" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0082.png" id="85_q20cs"]
+[ext_resource type="Texture2D" uid="uid://cptuu7v4fx4co" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0083.png" id="86_ky3ec"]
+[ext_resource type="Texture2D" uid="uid://7afdxs23t2kl" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0084.png" id="87_4t5ma"]
+[ext_resource type="Texture2D" uid="uid://bgj1jn2cl20nm" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0085.png" id="88_u8sa2"]
+[ext_resource type="Texture2D" uid="uid://cucljuvskkvuc" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0086.png" id="89_42e0h"]
+[ext_resource type="Texture2D" uid="uid://byf0il71wywen" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0087.png" id="90_fgybp"]
+[ext_resource type="Texture2D" uid="uid://bg5ug2uhapbn7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0088.png" id="91_yxuqi"]
+[ext_resource type="Texture2D" uid="uid://bgyqh0ia3dnjm" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0089.png" id="92_1q40d"]
+[ext_resource type="Texture2D" uid="uid://bx3dguwup6m4q" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0090.png" id="93_w70wy"]
+[ext_resource type="Texture2D" uid="uid://c8bku86wj75q5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0091.png" id="94_mhq8o"]
+[ext_resource type="Texture2D" uid="uid://dkpfmfa4marwa" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0092.png" id="95_6alua"]
+[ext_resource type="Texture2D" uid="uid://bhpv4nk2n0a1k" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0093.png" id="96_spx47"]
+[ext_resource type="Texture2D" uid="uid://bwsjwlghg1bv5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0094.png" id="97_at4qc"]
+[ext_resource type="Texture2D" uid="uid://4qnhjsvuqtcw" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0095.png" id="98_4nbgw"]
+[ext_resource type="Texture2D" uid="uid://b8i38ob7o5mh7" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0096.png" id="99_480fg"]
+[ext_resource type="Texture2D" uid="uid://xnn2aa3u8j3r" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0097.png" id="100_iexsy"]
+[ext_resource type="Texture2D" uid="uid://dr0gkdcsadpri" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0098.png" id="101_1xte0"]
+[ext_resource type="Texture2D" uid="uid://d3favaycd8pet" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0099.png" id="102_rp44w"]
+[ext_resource type="Texture2D" uid="uid://cfiixhja8xq3j" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0100.png" id="103_ugmlc"]
+[ext_resource type="Texture2D" uid="uid://b16o1m3wd1xdk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0101.png" id="104_5l035"]
+[ext_resource type="Texture2D" uid="uid://co3wurquf66uh" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0102.png" id="105_wdarg"]
+[ext_resource type="Texture2D" uid="uid://dvf4o5opbhb1p" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0103.png" id="106_jkobs"]
+[ext_resource type="Texture2D" uid="uid://e5vpwonl5lnm" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0104.png" id="107_8tevy"]
+[ext_resource type="Texture2D" uid="uid://dhn6jydw0uiyb" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0105.png" id="108_t15mu"]
+[ext_resource type="Texture2D" uid="uid://cdd3tilfas7nw" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0106.png" id="109_cf3yx"]
+[ext_resource type="Texture2D" uid="uid://cbb4rw4t8bs0" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0107.png" id="110_qg6u8"]
+[ext_resource type="Texture2D" uid="uid://bjwexw37cherg" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0108.png" id="111_s3u46"]
+[ext_resource type="Texture2D" uid="uid://bynaokddkaprv" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0109.png" id="112_ao3eo"]
+[ext_resource type="Texture2D" uid="uid://bf5d72cx2pv3w" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0110.png" id="113_o0ixw"]
+[ext_resource type="Texture2D" uid="uid://bulcpjfu7g7n3" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0111.png" id="114_2fomn"]
+[ext_resource type="Texture2D" uid="uid://umo10j35qtwo" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0112.png" id="115_iuq61"]
+[ext_resource type="Texture2D" uid="uid://8837ud8xnkrk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0113.png" id="116_l40m0"]
+[ext_resource type="Texture2D" uid="uid://4fheqd6mjoci" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0114.png" id="117_jsduk"]
+[ext_resource type="Texture2D" uid="uid://767ntaotv3bb" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0115.png" id="118_bsc8n"]
+[ext_resource type="Texture2D" uid="uid://be12yhrnr5bgk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0116.png" id="119_8ymlp"]
+[ext_resource type="Texture2D" uid="uid://dwx4pquylgeew" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0117.png" id="120_tvxny"]
+[ext_resource type="Texture2D" uid="uid://by81ppvx4vttj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0118.png" id="121_ddb41"]
+[ext_resource type="Texture2D" uid="uid://7bjqmylrdfb0" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0119.png" id="122_bppf4"]
+[ext_resource type="Texture2D" uid="uid://bx0d5ygtmv3pj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0120.png" id="123_b6srd"]
+[ext_resource type="Texture2D" uid="uid://c0tvugmtpjtws" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0121.png" id="124_yfmko"]
+[ext_resource type="Texture2D" uid="uid://iluxyfubm4c1" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0122.png" id="125_ilr4c"]
+[ext_resource type="Texture2D" uid="uid://chsfytdbarf5a" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0123.png" id="126_l5g5m"]
+[ext_resource type="Texture2D" uid="uid://cmdyv14vg243x" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0124.png" id="127_es7sa"]
+[ext_resource type="Texture2D" uid="uid://cw8chqoimcmxx" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0125.png" id="128_shyrt"]
+[ext_resource type="Texture2D" uid="uid://eogbs3vgcbvb" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0126.png" id="129_4tul7"]
+[ext_resource type="Texture2D" uid="uid://dgwjdruu0h03x" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0127.png" id="130_48w4r"]
+[ext_resource type="Texture2D" uid="uid://bnr7sbld6jjpj" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0128.png" id="131_7np7f"]
+[ext_resource type="Texture2D" uid="uid://b8o11qxe0bsqs" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0129.png" id="132_21086"]
+[ext_resource type="Texture2D" uid="uid://bsbwaf86c68a8" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0130.png" id="133_gfj4l"]
+[ext_resource type="Texture2D" uid="uid://c53vv5aukoexm" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0131.png" id="134_iy4me"]
+[ext_resource type="Texture2D" uid="uid://bm8ec1kla32bk" path="res://Assets/Images/Obstacles/cat/cat.png" id="135_ho25g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1m1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tx7do")
+}],
+"loop": true,
+"name": &"pac2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h5evr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nlq3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pw5kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f4jmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oa3sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_40b7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jx32u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hrs2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6888v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lft13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_it6gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_frrda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o43xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tv42t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bl66q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nrl4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wm7eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3pcl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2t7dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lab8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uscbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_omigr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_62y38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_adxdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_q06ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_utt6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3ndx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_s5cab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wr7dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rs2ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0px16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tyf4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jfenw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lj0rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mts2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5jwqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_uk7o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_0pces")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ax8fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_mykb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_uy77d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_7radx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_k6xb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_tript")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_m5662")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_e1wxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_dwke5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_67lvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ir788")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_pucso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_4bbhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1pwkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_7tjwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7w1k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_8onyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8jfo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_voltd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_q8quy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_rntvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pkcbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_55r1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_hdrlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_p7tkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_iugin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_nyrag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_hmfy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_vm1b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_36gtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_xonqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fohn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_dpetl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_f8owb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_5bwhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_inpwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_q6gff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_km647")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_oikj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_bofjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_oiayo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ti5su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_pygg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_svotw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_q20cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_ky3ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_4t5ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_u8sa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_42e0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_fgybp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_yxuqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_1q40d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_w70wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_mhq8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_6alua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_spx47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_at4qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_4nbgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_480fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_iexsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_1xte0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_rp44w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ugmlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_5l035")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_wdarg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_jkobs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_8tevy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_t15mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_cf3yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_qg6u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_s3u46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_ao3eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_o0ixw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_2fomn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_iuq61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_l40m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_jsduk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_bsc8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_8ymlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_tvxny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_ddb41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_bppf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_b6srd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_yfmko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_ilr4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_l5g5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_es7sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_shyrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_4tul7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_48w4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_7np7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_21086")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_gfj4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_iy4me")
+}],
+"loop": true,
+"name": &"pac3",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("135_ho25g")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]
 
 [node name="cat_obs" type="Node2D"]
 script = ExtResource("1_53dp2")
+
+[node name="CatAnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s1m1f")
+animation = &"pac3"
+centered = false
