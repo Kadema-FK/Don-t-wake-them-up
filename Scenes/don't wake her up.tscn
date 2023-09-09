@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://mlhgidq1ow1b"]
+[gd_scene load_steps=3 format=3 uid="uid://mlhgidq1ow1b"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://8qsyvny0qved" path="res://Assets/Images/Background/background_test_image.jpg" id="1_e75pv"]
+[ext_resource type="Script" path="res://Scripts/don't wake her up.gd" id="1_jhs1t"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_jhs1t")
+
+[node name="BackgroundTestImage" type="Sprite2D" parent="."]
+position = Vector2(629.5, 310.5)
+scale = Vector2(1.57407, 1.28007)
+texture = ExtResource("1_e75pv")
+
+[node name="Test_Clock" type="Label" parent="."]
+offset_left = 387.0
+offset_top = 587.0
+offset_right = 628.0
+offset_bottom = 610.0
+text = "Test"
