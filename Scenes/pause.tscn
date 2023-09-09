@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://clrrrdq11glja"]
+
+[node name="pause" type="Node2D"]
+process_mode = 2
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 817.0
+offset_bottom = 79.0
+color = Color(0, 0, 0, 0.541176)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 37.0
+offset_top = 8.0
+offset_right = 825.0
+offset_bottom = 86.0
+theme_override_font_sizes/normal_font_size = 43
+text = "Do you want to exit the game? (Y/N)"

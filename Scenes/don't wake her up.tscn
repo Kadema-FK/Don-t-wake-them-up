@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://mlhgidq1ow1b"]
+[gd_scene load_steps=10 format=3 uid="uid://mlhgidq1ow1b"]
 
 [ext_resource type="Texture2D" uid="uid://bg4m4qiu0lj2t" path="res://Assets/Images/Background/plansza_empty_sketch.png" id="2_jqufn"]
 [ext_resource type="PackedScene" uid="uid://cwkx4xqfoj1tr" path="res://Scenes/window_obs.tscn" id="3_ecayh"]
 [ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
-[ext_resource type="PackedScene" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
+[ext_resource type="PackedScene" uid="uid://dxpxwij74ak1r" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
+[ext_resource type="PackedScene" uid="uid://clrrrdq11glja" path="res://Scenes/pause.tscn" id="5_r4pp7"]
 [ext_resource type="PackedScene" uid="uid://bmnkyni2tl0cn" path="res://Scenes/cat_obs.tscn" id="5_tt8u4"]
-[ext_resource type="PackedScene" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
-[ext_resource type="PackedScene" uid="uid://cy6wom821tjvy" path="res://Scenes/dog_obs.tscn" id="7_qgjty"]
+[ext_resource type="PackedScene" uid="uid://dcahcyergbd8v" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
+[ext_resource type="PackedScene" uid="uid://dcm8ea0tvnfv6" path="res://Scenes/dog_obs.tscn" id="7_qgjty"]
 
 [sub_resource type="GDScript" id="GDScript_1epx3"]
 script/source = "extends Node2D
@@ -17,6 +18,7 @@ var eventsInHour0 = [0,0];
 var hour = 0;
 const sInHour = 20;
 @onready var obstacles = [$Cat, $Dog, $Window, $Boogeyman];
+var pause = false
 
 
 var rng; #random numer generator
@@ -33,7 +35,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed(\"pause\"):
+		if pause == false:
+			pause = true
+			_on_pause_button_pressed()
+		elif Input.is_action_just_pressed(\"pause\") and pause == true:
+			pause = false
+			_on_pause_popup_close_pressed()
+	
+	if pause == true and Input.is_action_just_pressed(\"Y\"):
+		pass #exit to main menu
+	if pause == true and Input.is_action_just_pressed(\"N\"):
+		pause = false
+		_on_pause_popup_close_pressed()
 
 func resetEventTimer(start, end):
 	var time = rng.randf_range(start, end);
@@ -59,21 +73,33 @@ func _on_event_timer_timeout():
 	else:
 		resetEventTimer(eventTimeMinMax[maks_array][0], eventTimeMinMax[maks_array][1]);
 	pass # Replace with function body.
+
+func _on_pause_button_pressed():
+	get_tree().paused = true
+	$pause.visible = true
+	
+func _on_pause_popup_close_pressed():
+	$pause.visible = false
+	get_tree().paused = false
 "
 
 [node name="Game" type="Node2D"]
+process_mode = 3
 script = SubResource("GDScript_1epx3")
 
 [node name="PlanszaEmptySketch" type="Sprite2D" parent="."]
+process_mode = 1
 texture = ExtResource("2_jqufn")
 centered = false
 
 [node name="PlanszaSketch" type="Sprite2D" parent="."]
+process_mode = 1
 visible = false
 texture = ExtResource("3_hjj7f")
 centered = false
 
 [node name="Test_Clock" type="Label" parent="."]
+process_mode = 1
 offset_left = 41.0
 offset_top = 1027.0
 offset_right = 282.0
@@ -81,24 +107,34 @@ offset_bottom = 1053.0
 text = "Test"
 
 [node name="GameTimer" type="Timer" parent="."]
+process_mode = 1
 wait_time = 120.0
 
 [node name="EventTimer" type="Timer" parent="."]
+process_mode = 1
 
 [node name="Window" parent="." instance=ExtResource("3_ecayh")]
+process_mode = 1
 position = Vector2(1556, 170)
 scale = Vector2(2.28, 2.28)
 
 [node name="Boogeyman" parent="." instance=ExtResource("4_yshmp")]
+process_mode = 1
 position = Vector2(1006, 730)
 
 [node name="Cat" parent="." instance=ExtResource("5_tt8u4")]
+process_mode = 1
 
 [node name="Clock" parent="." instance=ExtResource("6_mof2p")]
+process_mode = 1
 position = Vector2(845, 383)
 
 [node name="Dog" parent="." instance=ExtResource("7_qgjty")]
+process_mode = 1
 position = Vector2(733, 920)
+
+[node name="pause" parent="." instance=ExtResource("5_r4pp7")]
+process_mode = 3
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="EventTimer" to="." method="_on_event_timer_timeout"]
