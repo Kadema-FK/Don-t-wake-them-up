@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx7tvegfjs4ux"]
+
+[ext_resource type="Script" path="res://Scripts/cat_obs.gd" id="1_53dp2"]
+
+[node name="cat_obs" type="Node2D"]
+script = ExtResource("1_53dp2")
