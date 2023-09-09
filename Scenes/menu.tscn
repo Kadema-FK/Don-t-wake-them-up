@@ -7,10 +7,10 @@ blend_mode = 1
 
 [sub_resource type="Theme" id="Theme_rld3u"]
 
-[sub_resource type="SystemFont" id="SystemFont_xvplg"]
+[sub_resource type="SystemFont" id="SystemFont_jsqrd"]
 
 [sub_resource type="Theme" id="Theme_0ybd3"]
-/fonts/Play = SubResource("SystemFont_xvplg")
+/fonts/Play = SubResource("SystemFont_jsqrd")
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_mni7o")
