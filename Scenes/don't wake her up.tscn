@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bg4m4qiu0lj2t" path="res://Assets/Images/Background/plansza_empty_sketch.png" id="2_jqufn"]
 [ext_resource type="PackedScene" uid="uid://cwkx4xqfoj1tr" path="res://Scenes/window_obs.tscn" id="3_ecayh"]
 [ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
-[ext_resource type="PackedScene" uid="uid://dxpxwij74ak1r" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
-[ext_resource type="PackedScene" uid="uid://clrrrdq11glja" path="res://Scenes/pause.tscn" id="5_r4pp7"]
+[ext_resource type="PackedScene" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
+[ext_resource type="PackedScene" uid="uid://doknx81o18o4w" path="res://Scenes/pause.tscn" id="5_r4pp7"]
 [ext_resource type="PackedScene" uid="uid://bmnkyni2tl0cn" path="res://Scenes/cat_obs.tscn" id="5_tt8u4"]
-[ext_resource type="PackedScene" uid="uid://dcahcyergbd8v" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
+[ext_resource type="PackedScene" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
 [ext_resource type="PackedScene" uid="uid://dcm8ea0tvnfv6" path="res://Scenes/dog_obs.tscn" id="7_qgjty"]
 
 [sub_resource type="GDScript" id="GDScript_1epx3"]
@@ -28,26 +28,15 @@ func _ready():
 	rng = RandomNumberGenerator.new();
 	eventsInHour0[0] = rng.randi_range(0,1);
 	eventsInHour0[1] = rng.randi_range(2,obstacles.size()-1);
-	resetEventTimer(eventTimeMinMax[0][0], eventTimeMinMax[0][1]);
+	obstacles[0].start();
+	#resetEventTimer(eventTimeMinMax[0][0], eventTimeMinMax[0][1]);
 	$GameTimer.start(sInHour);
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed(\"pause\"):
-		if pause == false:
-			pause = true
-			_on_pause_button_pressed()
-		elif Input.is_action_just_pressed(\"pause\") and pause == true:
-			pause = false
-			_on_pause_popup_close_pressed()
-	
-	if pause == true and Input.is_action_just_pressed(\"Y\"):
-		pass #exit to main menu
-	if pause == true and Input.is_action_just_pressed(\"N\"):
-		pause = false
-		_on_pause_popup_close_pressed()
+	pass;
 
 func resetEventTimer(start, end):
 	var time = rng.randf_range(start, end);
@@ -81,6 +70,21 @@ func _on_pause_button_pressed():
 func _on_pause_popup_close_pressed():
 	$pause.visible = false
 	get_tree().paused = false
+
+func _input(event):
+		if pause == false:
+			pause = true
+			_on_pause_button_pressed()
+		elif Input.is_action_just_pressed(\"pause\") and pause == true:
+			pause = false
+			_on_pause_popup_close_pressed()
+	
+	if pause == true:
+		if Input.is_action_just_pressed(\"Y\"):
+			pass #exit to main menu
+		elif Input.is_action_just_pressed(\"N\"):
+			pause = false
+		_on_pause_popup_close_pressed()
 "
 
 [node name="Game" type="Node2D"]
