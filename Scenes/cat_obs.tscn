@@ -419,7 +419,7 @@ states/Touch/position = Vector2(588, 71)
 states/Wake/node = SubResource("AnimationNodeBlendSpace1D_k07g0")
 states/Wake/position = Vector2(256, 71)
 transitions = ["Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_k5iiw"), "Sleep", "Wake", SubResource("AnimationNodeStateMachineTransition_yru1r"), "Wake", "Awoken", SubResource("AnimationNodeStateMachineTransition_x8uu6"), "Awoken", "Sleep", SubResource("AnimationNodeStateMachineTransition_4qrws"), "Awoken", "Touch", SubResource("AnimationNodeStateMachineTransition_k2m5j"), "Touch", "Jump", SubResource("AnimationNodeStateMachineTransition_hb6kw"), "Jump", "Guilty", SubResource("AnimationNodeStateMachineTransition_eiorl"), "Touch", "Sleep", SubResource("AnimationNodeStateMachineTransition_icunf"), "Jump", "Sleep", SubResource("AnimationNodeStateMachineTransition_13b53"), "Guilty", "Sleep", SubResource("AnimationNodeStateMachineTransition_igaqe")]
-graph_offset = Vector2(12, -103)
+graph_offset = Vector2(-60, -2)
 
 [node name="Cat" type="Node2D"]
 script = ExtResource("1_53dp2")

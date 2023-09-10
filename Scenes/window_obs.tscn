@@ -1,20 +1,28 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwkx4xqfoj1tr"]
+[gd_scene load_steps=20 format=3 uid="uid://cwkx4xqfoj1tr"]
 
 [ext_resource type="Script" path="res://Scripts/window_obs.gd" id="1_8r6so"]
-[ext_resource type="Texture2D" uid="uid://2s22ynv5nbq8" path="res://Assets/Images/Obstacles/window/window_closed.png" id="2_gv51a"]
-[ext_resource type="Texture2D" uid="uid://ctfagxwgry61k" path="res://Assets/Images/Obstacles/window/window_open.png" id="3_d5v4b"]
+[ext_resource type="Texture2D" uid="uid://biibc4yx6lhm4" path="res://Assets/Images/Obstacles/window/okno_closed.png" id="2_mc3ps"]
+[ext_resource type="Texture2D" uid="uid://bpchrsekf70l7" path="res://Assets/Images/Obstacles/window/okno_open.png" id="3_omx4l"]
+[ext_resource type="Texture2D" uid="uid://3quvvhx8jggx" path="res://Assets/Images/Obstacles/window/okno_closed_blue_big.png" id="3_sb481"]
+[ext_resource type="Texture2D" uid="uid://8qn0njirmofb" path="res://Assets/Images/Obstacles/window/okno_open_blue_soft.png" id="4_1u2wb"]
+[ext_resource type="Texture2D" uid="uid://beot02saldfi2" path="res://Assets/Images/Obstacles/window/okno_closed_red_big.png" id="4_tgb2f"]
 [ext_resource type="Texture2D" uid="uid://5ui7tqaqo8e5" path="res://Assets/Images/Obstacles/window/weewoo.png" id="5_0iwuh"]
 [ext_resource type="Texture2D" uid="uid://dx53nhj25saw6" path="res://Assets/Images/Obstacles/window/termometer/hot_temp.png" id="5_5jlmx"]
+[ext_resource type="Texture2D" uid="uid://ceojko1ni0iq3" path="res://Assets/Images/Obstacles/window/okno_open_red_soft.png" id="5_snf1i"]
 [ext_resource type="Texture2D" uid="uid://bkm23cdthj0bk" path="res://Assets/Images/Obstacles/window/termometer/normal_temp.png" id="6_d046c"]
+[ext_resource type="Texture2D" uid="uid://vvqtysput0ld" path="res://Assets/Images/Obstacles/window/okno_closed_blue_soft.png" id="6_dwy7j"]
+[ext_resource type="Texture2D" uid="uid://d07v6octpbg84" path="res://Assets/Images/Obstacles/window/okno_closed_red_soft.png" id="7_30hai"]
+[ext_resource type="Texture2D" uid="uid://djq7elk2gwo65" path="res://Assets/Images/Obstacles/window/okno_open_blue_big.png" id="7_ennst"]
 [ext_resource type="Texture2D" uid="uid://b60vejcyatyme" path="res://Assets/Images/Obstacles/window/termometer/warm_temp.png" id="7_gqn2v"]
 [ext_resource type="AudioStream" uid="uid://cxkr1m4wxoqm2" path="res://Assets/Sounds/Ambulance Sound Effect.mp3" id="8_18whg"]
+[ext_resource type="Texture2D" uid="uid://bu1pyfij1wx1n" path="res://Assets/Images/Obstacles/window/okno_open_red_big.png" id="8_je3we"]
 [ext_resource type="AudioStream" uid="uid://bpikgb4lwpx3w" path="res://Assets/Sounds/slide_window.mp3" id="9_hqcp6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dls04"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gv51a")
+"texture": ExtResource("2_mc3ps")
 }],
 "loop": true,
 "name": &"closed",
@@ -22,10 +30,54 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_d5v4b")
+"texture": ExtResource("3_sb481")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tgb2f")
+}],
+"loop": true,
+"name": &"closed_big_wewo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dwy7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_30hai")
+}],
+"loop": true,
+"name": &"closed_wewo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_omx4l")
 }],
 "loop": true,
 "name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ennst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_je3we")
+}],
+"loop": true,
+"name": &"open_big_wewo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1u2wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_snf1i")
+}],
+"loop": true,
+"name": &"open_wewo",
 "speed": 5.0
 }]
 
