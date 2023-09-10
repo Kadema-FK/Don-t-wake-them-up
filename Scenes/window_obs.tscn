@@ -1,58 +1,102 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwkx4xqfoj1tr"]
+[gd_scene load_steps=9 format=3 uid="uid://cwkx4xqfoj1tr"]
 
 [ext_resource type="Script" path="res://Scripts/window_obs.gd" id="1_8r6so"]
-[ext_resource type="Texture2D" uid="uid://2s22ynv5nbq8" path="res://Assets/Images/Obstacles/window/window_closed.png" id="2_gv51a"]
-[ext_resource type="Texture2D" uid="uid://ctfagxwgry61k" path="res://Assets/Images/Obstacles/window/window_open.png" id="3_d5v4b"]
-[ext_resource type="Texture2D" uid="uid://5ui7tqaqo8e5" path="res://Assets/Images/Obstacles/window/weewoo.png" id="5_0iwuh"]
-[ext_resource type="Texture2D" uid="uid://dx53nhj25saw6" path="res://Assets/Images/Obstacles/window/termometer/hot_temp.png" id="5_5jlmx"]
-[ext_resource type="Texture2D" uid="uid://bkm23cdthj0bk" path="res://Assets/Images/Obstacles/window/termometer/normal_temp.png" id="6_d046c"]
-[ext_resource type="Texture2D" uid="uid://b60vejcyatyme" path="res://Assets/Images/Obstacles/window/termometer/warm_temp.png" id="7_gqn2v"]
+[ext_resource type="Texture2D" uid="uid://mbsq8jaq4woj" path="res://Assets/Images/Obstacles/window.jpg" id="2_27rtw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dls04"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gv51a")
+"texture": null
 }],
 "loop": true,
 "name": &"closed",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_d5v4b")
+"texture": null
 }],
 "loop": true,
 "name": &"open",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rdgpx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_5jlmx")
-}],
-"loop": true,
-"name": &"hot",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_d046c")
-}],
-"loop": true,
-"name": &"normal",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_gqn2v")
-}],
-"loop": true,
-"name": &"warm",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_vqcfe"]
+resource_name = "0"
+
+[sub_resource type="Animation" id="Animation_jmyex"]
+resource_name = "2"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.122173, 0.0, -0.122173]
+}
+
+[sub_resource type="Animation" id="Animation_tpkdx"]
+resource_name = "3"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.115, 1.115)]
+}
+
+[sub_resource type="Animation" id="Animation_lvcdx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.122173]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k0cn8"]
+_data = {
+"0": SubResource("Animation_vqcfe"),
+"2": SubResource("Animation_jmyex"),
+"3": SubResource("Animation_tpkdx"),
+"RESET": SubResource("Animation_lvcdx")
+}
 
 [node name="Window" type="Node2D"]
 script = ExtResource("1_8r6so")
@@ -60,7 +104,18 @@ script = ExtResource("1_8r6so")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_dls04")
-animation = &"open"
+animation = &"closed"
+
+[node name="Window_sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(71, 78)
+rotation = 0.122173
+texture = ExtResource("2_27rtw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Window_sprite"]
+libraries = {
+"": SubResource("AnimationLibrary_k0cn8")
+}
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -71,20 +126,6 @@ polygon = PackedVector2Array(-48, -75.75, -42, 310, 185, 315, 183, -188)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 
-[node name="Weewoo" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(960, 540)
-texture = ExtResource("5_0iwuh")
-
-[node name="Termometer" type="AnimatedSprite2D" parent="."]
-position = Vector2(960, 540)
-sprite_frames = SubResource("SpriteFrames_rdgpx")
-animation = &"normal"
-
-[node name="temp_timer" type="Timer" parent="."]
-wait_time = 5.0
-
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="temp_timer" to="." method="_on_temp_timer_timeout"]

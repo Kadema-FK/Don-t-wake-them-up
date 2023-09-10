@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bg4m4qiu0lj2t" path="res://Assets/Images/Background/plansza_empty_sketch.png" id="2_jqufn"]
 [ext_resource type="PackedScene" uid="uid://cwkx4xqfoj1tr" path="res://Scenes/window_obs.tscn" id="3_ecayh"]
 [ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
-[ext_resource type="PackedScene" uid="uid://dxpxwij74ak1r" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
+[ext_resource type="PackedScene" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
 [ext_resource type="PackedScene" uid="uid://clrrrdq11glja" path="res://Scenes/pause.tscn" id="5_r4pp7"]
 [ext_resource type="PackedScene" uid="uid://bmnkyni2tl0cn" path="res://Scenes/cat_obs.tscn" id="5_tt8u4"]
-[ext_resource type="PackedScene" uid="uid://dcahcyergbd8v" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
+[ext_resource type="PackedScene" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
 [ext_resource type="PackedScene" uid="uid://dcm8ea0tvnfv6" path="res://Scenes/dog_obs.tscn" id="7_qgjty"]
-[ext_resource type="PackedScene" path="res://Scenes/baby.tscn" id="10_kh5fo"]
+[ext_resource type="PackedScene" uid="uid://0cyup0d71qm2" path="res://Scenes/baby.tscn" id="10_kh5fo"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -43,9 +43,12 @@ process_mode = 1
 
 [node name="Window" parent="." instance=ExtResource("3_ecayh")]
 process_mode = 1
+position = Vector2(1556, 170)
+scale = Vector2(2.28, 2.28)
 
 [node name="Boogeyman" parent="." instance=ExtResource("4_yshmp")]
 process_mode = 1
+position = Vector2(1006, 730)
 
 [node name="Cat" parent="." instance=ExtResource("5_tt8u4")]
 process_mode = 1
