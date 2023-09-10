@@ -18,16 +18,19 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in == true:
 			move_food = true
-		elif event.is_released():
-			move_food = false
+			print("food move", move_food)
+		if mouse_in_food == true and state >= 2 and move_food == true:
+			$AnimatedSprite2D.play("4")
+			noise_level = 0
+			$Timer.stop()
+			$dog_back.start()
+			$dog_bark.stop()
+		if event.is_released():
 			$DogFood.position.x = 673
 			$DogFood.position.y = 547
-			if mouse_in_food == true and state >= 2:
-				$AnimatedSprite2D.play("4")
-				noise_level = 0
-				$Timer.stop()
-				$dog_back.start()
-				$dog_bark.stop()
+			move_food = false
+			
+	
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;

@@ -1,21 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwjnitesagshg"]
+[gd_scene load_steps=4 format=3 uid="uid://bwjnitesagshg"]
 
 [ext_resource type="Script" path="res://Scripts/defeated.gd" id="1_mu23h"]
 [ext_resource type="Texture2D" uid="uid://b47jequ8djbph" path="res://Assets/Images/Background/loose.png" id="1_ogpta"]
+[ext_resource type="Texture2D" uid="uid://cttmqnvy7f0uf" path="res://Assets/Images/back.png" id="3_ikmea"]
 
 [node name="Defeated" type="Node2D"]
 script = ExtResource("1_mu23h")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1932.0
+offset_bottom = 1089.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 799.0
+offset_top = 842.0
+offset_right = 957.0
+offset_bottom = 873.0
+scale = Vector2(2, 2)
+text = "Back to main menu"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(87, 165)
+scale = Vector2(0.907407, 0.907407)
 texture = ExtResource("1_ogpta")
 centered = false
 
-[node name="Button" type="Button" parent="."]
-offset_left = 774.0
-offset_top = 626.0
-offset_right = 932.0
-offset_bottom = 657.0
-scale = Vector2(2, 2)
-text = "Back to main menu"
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(954, 870)
+texture = ExtResource("3_ikmea")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
