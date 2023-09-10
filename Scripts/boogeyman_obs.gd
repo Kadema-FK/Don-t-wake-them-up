@@ -62,12 +62,14 @@ func _on_boogy_run_timeout():
 		state -= 1
 		
 	if state == 0:
+		noise_level = 0
 		$Boogeyman.play("0")
 		$Timer.stop()
 		$AnimationPlayer.play("stop")
 		$Boogy_run.stop()
 	if state == 2:
 		$Boogeyman.play("1")
+		noise_level = 0
 
 func get_noise_level():
 	return noise_level;
