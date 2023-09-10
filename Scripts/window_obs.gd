@@ -20,8 +20,12 @@ func _input(event):
 			if open == true:
 				open = false
 				$AnimatedSprite2D.play("closed")
+				$window_sound.play()
+				$AudioStreamPlayer.volume_db = -20
 			elif open == false:
 				open = true
+				$window_sound.play()
+				$AudioStreamPlayer.volume_db = 0
 				$AnimatedSprite2D.play("open")
 
 func _on_area_2d_mouse_entered():
@@ -50,9 +54,11 @@ func _on_timer_timeout():
 	if state == 2:
 		$Weewoo.visible = true
 	if state == 3 and open == true:
+		$AudioStreamPlayer.play()
 		noise_level = 10
 	if state >= 4:
 		noise_level = 0
+		$AudioStreamPlayer.stop()
 		$Weewoo.visible = false
 		$Timer.stop()
 		

@@ -13,10 +13,12 @@ func turnOnTV():
 	$Screen.visible = true;
 	$Screen.play("tv_on");
 	isOn = true;
+	$AudioStreamPlayer.play()
 	
 func turnOffTV():
 	$Screen.visible = false;
 	isOn = false;
+	$AudioStreamPlayer.stop()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
