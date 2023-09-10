@@ -86,7 +86,7 @@ wait_time = 10.0
 
 [node name="dog_bark" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_pe4l0")
-volume_db = -25.297
+volume_db = -14.991
 pitch_scale = 0.82
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

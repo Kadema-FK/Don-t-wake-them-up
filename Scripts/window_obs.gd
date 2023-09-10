@@ -24,7 +24,7 @@ func _input(event):
 					open = false
 					$AnimatedSprite2D.play("closed")
 					$window_sound.play()
-					$AudioStreamPlayer.volume_db = -20
+					$AudioStreamPlayer.volume_db = -10
 					noise_level = 0
 					if state == 2:
 						$AnimatedSprite2D.play("closed_wewo")

@@ -19,7 +19,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in == true:
 			move_food = true
 			print("food move", move_food)
-		if mouse_in_food == true and state >= 2 and move_food == true:
+		if mouse_in_food == true and state >= 1 and move_food == true:
 			$AnimatedSprite2D.play("4")
 			noise_level = 0
 			$Timer.stop()
@@ -52,9 +52,9 @@ func _on_timer_timeout():
 	if state <=3:
 		state += 1
 	
-	if state == 2:
+	if state == 1:
 		$AnimatedSprite2D.play("2")
-	if state == 4:
+	if state == 2:
 		$AnimatedSprite2D.play("3")
 		noise_level = 10
 		$dog_bark.play()
