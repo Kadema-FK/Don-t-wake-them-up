@@ -6,6 +6,7 @@ var eventsInHour0 = [0,0];
 var hour = 0;
 const sInHour = 20;
 @onready var obstacles = [$Cat, $Dog, $Window, $Boogeyman];
+var pause = false
 
 
 var rng; #random numer generator
@@ -15,6 +16,7 @@ func _ready():
 	rng = RandomNumberGenerator.new();
 	eventsInHour0[0] = rng.randi_range(0,1);
 	eventsInHour0[1] = rng.randi_range(2,obstacles.size()-1);
+	#obstacles[0].start();
 	resetEventTimer(eventTimeMinMax[0][0], eventTimeMinMax[0][1]);
 	$GameTimer.start(sInHour);
 	pass # Replace with function body.
@@ -22,7 +24,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	pass;
 
 func resetEventTimer(start, end):
 	var time = rng.randf_range(start, end);
@@ -48,3 +50,29 @@ func _on_event_timer_timeout():
 	else:
 		resetEventTimer(eventTimeMinMax[maks_array][0], eventTimeMinMax[maks_array][1]);
 	pass # Replace with function body.
+
+func _on_pause_button_pressed():
+	get_tree().paused = true
+	$pause.visible = true
+	
+func _on_pause_popup_close_pressed():
+	$pause.visible = false
+	get_tree().paused = false
+
+func _input(event):
+	if Input.is_action_just_pressed("pause"):
+		if pause == false:
+			pause = true
+			_on_pause_button_pressed()
+		elif Input.is_action_just_pressed("pause") and pause == true:
+			pause = false
+			_on_pause_popup_close_pressed()
+
+	if pause == true:
+		if Input.is_action_just_pressed("Y"):
+			pause = false
+			get_tree().paused = false
+			get_tree().change_scene_to_file("res://Scenes/menu.tscn");
+		if Input.is_action_just_pressed("N"):
+			pause = false
+			_on_pause_popup_close_pressed()
