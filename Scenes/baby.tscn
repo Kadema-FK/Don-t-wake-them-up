@@ -159,6 +159,7 @@ parameters/Idle/blend_position = -0.0075075
 parameters/Slow/blend_position = 0.0
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 2
 offset_left = 637.0
 offset_top = 952.0
