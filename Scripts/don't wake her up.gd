@@ -9,7 +9,6 @@ var calmingEffect = 5;
 @onready var obstacles = [$Cat, $Dog, $Window, $Boogeyman];
 var pause = false
 
-
 var rng; #random numer generator
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +32,9 @@ func _process(delta):
 	if $Baby.noiseLevel > 0:
 		noise -= calmingEffect;
 	$Baby.noiseLevel += noise * delta;
+	
+	if $Baby.isTooLoud(): get_tree().change_scene_to_file("res://Scenes/defeated.tscn");
+	if hour >= day: get_tree().change_scene_to_file("res://Scenes/victory_end_scene.tscn");
 	pass;
 
 func resetEventTimer(start, end):

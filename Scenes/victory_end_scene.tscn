@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv77n6ek0f8cc"]
+
+[ext_resource type="Texture2D" uid="uid://dlijbpgfdndlx" path="res://Assets/Images/Background/victory.png" id="1_aoqq2"]
+[ext_resource type="Script" path="res://Scripts/victory_end_scene.gd" id="1_jxn6n"]
+
+[node name="VictoryEndScene" type="Node2D"]
+script = ExtResource("1_jxn6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aoqq2")
+centered = false
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+offset_left = -3.0
+offset_top = 846.0
+offset_right = 1916.0
+offset_bottom = 1019.0
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 833.0
+offset_top = 923.0
+offset_right = 991.0
+offset_bottom = 954.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Back to main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

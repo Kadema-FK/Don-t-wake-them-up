@@ -12,6 +12,8 @@ func _ready():
 	$AnimationTree.active = true;
 	pass # Replace with function body.
 
+func isTooLoud():
+	return noiseLevel > maxNoiseLevel;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

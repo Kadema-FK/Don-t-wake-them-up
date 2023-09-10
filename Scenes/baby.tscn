@@ -119,7 +119,7 @@ advance_expression = "noiseLevel > maxMediumNoise"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yke57"]
 advance_mode = 2
-advance_expression = "noiseLevel <= tmp_direction"
+advance_expression = "noiseLevel <= maxQuietTime"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_weg7x"]
 advance_mode = 2

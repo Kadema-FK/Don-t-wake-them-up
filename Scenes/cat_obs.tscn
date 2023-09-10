@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://o5qif55w2i6x" path="res://Assets/Images/Obstacles/cat/sleeping/sleep.png" id="2_vl8xc"]
 [ext_resource type="Texture2D" uid="uid://bklel78t1fwkl" path="res://Assets/Images/Obstacles/cat/awoken/a1.png" id="11_g3jjy"]
 [ext_resource type="Texture2D" uid="uid://dx2dqo8yajbcw" path="res://Assets/Images/Obstacles/cat/awoken/a2.png" id="12_bimxh"]
-[ext_resource type="PackedScene" uid="uid://b8u8kexox4e8a" path="res://Scenes/TV.tscn" id="12_erf8s"]
+[ext_resource type="PackedScene" uid="uid://b8u8kexox4e8a" path="res://Scenes/tv.tscn" id="12_erf8s"]
 [ext_resource type="Texture2D" uid="uid://duoyqgmx6hmw6" path="res://Assets/Images/Obstacles/cat/awoken/a3.png" id="13_djk5t"]
 [ext_resource type="Texture2D" uid="uid://c00sgrymqb4kx" path="res://Assets/Images/Obstacles/cat/pac/p1.png" id="14_wm15y"]
 [ext_resource type="Texture2D" uid="uid://cr2smvl32gpes" path="res://Assets/Images/Obstacles/cat/pac/p3.png" id="15_05rtr"]
@@ -12,22 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://vgqu8mek0yff" path="res://Assets/Images/Obstacles/cat/scared/jump.png" id="17_we07o"]
 [ext_resource type="Texture2D" uid="uid://fwjapst52bf4" path="res://Assets/Images/Obstacles/cat/scared/s2.png" id="18_6ommw"]
 [ext_resource type="Texture2D" uid="uid://c6yxtk5hhqfxo" path="res://Assets/Images/Obstacles/cat/scared/s1.png" id="19_okyrq"]
-
-[sub_resource type="Animation" id="Animation_rbkpj"]
-resource_name = "sleep"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_vl8xc")]
-}
 
 [sub_resource type="Animation" id="Animation_0fl53"]
 length = 0.001
@@ -42,21 +26,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("2_vl8xc")]
-}
-
-[sub_resource type="Animation" id="Animation_e8bgj"]
-resource_name = "wake_up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("11_g3jjy")]
 }
 
 [sub_resource type="Animation" id="Animation_shtry"]
@@ -74,22 +43,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("12_bimxh"), ExtResource("13_djk5t")]
-}
-
-[sub_resource type="Animation" id="Animation_b42bi"]
-resource_name = "touching"
-length = 7.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.9, 1.5, 1.9, 2.5, 2.8, 3.3, 3.8, 4, 4.3, 4.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2")]
 }
 
 [sub_resource type="Animation" id="Animation_34wsa"]
@@ -123,6 +76,53 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("18_6ommw"), ExtResource("19_okyrq")]
+}
+
+[sub_resource type="Animation" id="Animation_rbkpj"]
+resource_name = "sleep"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_vl8xc")]
+}
+
+[sub_resource type="Animation" id="Animation_b42bi"]
+resource_name = "touching"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.9, 1.5, 1.9, 2.5, 2.8, 3.3, 3.8, 4, 4.3, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2")]
+}
+
+[sub_resource type="Animation" id="Animation_e8bgj"]
+resource_name = "wake_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_g3jjy")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wfous"]
