@@ -1,14 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://0cyup0d71qm2"]
+[gd_scene load_steps=25 format=3 uid="uid://0cyup0d71qm2"]
 
 [ext_resource type="Script" path="res://Scripts/baby.gd" id="1_qkbji"]
 [ext_resource type="Texture2D" uid="uid://ckupx11mpevs" path="res://Assets/Images/Baby/cradle.png" id="1_uag1d"]
 [ext_resource type="Texture2D" uid="uid://nf5dxi3mbe5s" path="res://Assets/Images/Baby/cradlel.png" id="2_4dhlm"]
 [ext_resource type="Texture2D" uid="uid://dxx05sew0frcl" path="res://Assets/Images/Baby/cradlep.png" id="3_7wf5f"]
+[ext_resource type="Texture2D" uid="uid://c8sde1v6lnacx" path="res://Assets/Images/Baby/idle/i1.png" id="5_f02hr"]
+[ext_resource type="Texture2D" uid="uid://ldg8bqpgg07" path="res://Assets/Images/Baby/idle/i2.png" id="6_jgkf0"]
+[ext_resource type="Texture2D" uid="uid://cjqe7w16y10ew" path="res://Assets/Images/Baby/idle/i3.png" id="7_kdu0u"]
 
-[sub_resource type="Animation" id="Animation_7m768"]
-resource_name = "slow_rocking"
-length = 3.2
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_x47up"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -16,10 +17,10 @@ tracks/0/path = NodePath("Cradle:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.6, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_uag1d"), ExtResource("2_4dhlm"), ExtResource("1_uag1d"), ExtResource("3_7wf5f")]
+"values": [ExtResource("1_uag1d")]
 }
 
 [sub_resource type="Animation" id="Animation_naxsh"]
@@ -39,8 +40,11 @@ tracks/0/keys = {
 "values": [ExtResource("1_uag1d"), ExtResource("2_4dhlm"), ExtResource("1_uag1d"), ExtResource("3_7wf5f")]
 }
 
-[sub_resource type="Animation" id="Animation_x47up"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_cwohf"]
+resource_name = "idle"
+length = 3.0
+loop_mode = 1
+step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -48,15 +52,15 @@ tracks/0/path = NodePath("Cradle:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("1_uag1d")]
+"values": [ExtResource("5_f02hr"), ExtResource("6_jgkf0"), ExtResource("7_kdu0u")]
 }
 
-[sub_resource type="Animation" id="Animation_cwohf"]
-resource_name = "idle"
-length = 0.3
+[sub_resource type="Animation" id="Animation_7m768"]
+resource_name = "slow_rocking"
+length = 3.2
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -65,10 +69,10 @@ tracks/0/path = NodePath("Cradle:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.8, 1.6, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("1_uag1d")]
+"values": [ExtResource("1_uag1d"), ExtResource("2_4dhlm"), ExtResource("1_uag1d"), ExtResource("3_7wf5f")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nnex6"]

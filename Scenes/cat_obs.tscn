@@ -1,63 +1,247 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmnkyni2tl0cn"]
+[gd_scene load_steps=44 format=3 uid="uid://bmnkyni2tl0cn"]
 
 [ext_resource type="Script" path="res://Scripts/cat_obs.gd" id="1_53dp2"]
-[ext_resource type="Texture2D" uid="uid://coy6pkrcugu0l" path="res://Assets/Images/Obstacles/cat/cat_pac_2/cat2.png" id="2_tx7do"]
-[ext_resource type="Texture2D" uid="uid://daspd8cqva8gx" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0000.png" id="3_h5evr"]
-[ext_resource type="Texture2D" uid="uid://co6fsfpxlke01" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0025.png" id="28_utt6t"]
-[ext_resource type="Texture2D" uid="uid://bja4x0uc3apqk" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0050.png" id="53_4bbhq"]
-[ext_resource type="Texture2D" uid="uid://dgbhg8sb2dqo5" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0075.png" id="78_km647"]
-[ext_resource type="Texture2D" uid="uid://cfiixhja8xq3j" path="res://Assets/Images/Obstacles/cat/cat_pac_3/cat3_pac_0100.png" id="103_ugmlc"]
-[ext_resource type="Texture2D" uid="uid://1qmb6rvynb1b" path="res://Assets/Images/Obstacles/cat/cat_scared/scared.png" id="135_7dr6j"]
-[ext_resource type="Texture2D" uid="uid://bm8ec1kla32bk" path="res://Assets/Images/Obstacles/cat/cat.png" id="135_ho25g"]
+[ext_resource type="Texture2D" uid="uid://o5qif55w2i6x" path="res://Assets/Images/Obstacles/cat/sleeping/sleep.png" id="2_vl8xc"]
+[ext_resource type="Texture2D" uid="uid://bklel78t1fwkl" path="res://Assets/Images/Obstacles/cat/awoken/a1.png" id="11_g3jjy"]
+[ext_resource type="Texture2D" uid="uid://dx2dqo8yajbcw" path="res://Assets/Images/Obstacles/cat/awoken/a2.png" id="12_bimxh"]
+[ext_resource type="PackedScene" uid="uid://b8u8kexox4e8a" path="res://Scenes/TV.tscn" id="12_erf8s"]
+[ext_resource type="Texture2D" uid="uid://duoyqgmx6hmw6" path="res://Assets/Images/Obstacles/cat/awoken/a3.png" id="13_djk5t"]
+[ext_resource type="Texture2D" uid="uid://c00sgrymqb4kx" path="res://Assets/Images/Obstacles/cat/pac/p1.png" id="14_wm15y"]
+[ext_resource type="Texture2D" uid="uid://cr2smvl32gpes" path="res://Assets/Images/Obstacles/cat/pac/p3.png" id="15_05rtr"]
+[ext_resource type="Texture2D" uid="uid://ceaxa7w6qgcf7" path="res://Assets/Images/Obstacles/cat/pac/p2.png" id="16_uqli2"]
+[ext_resource type="Texture2D" uid="uid://vgqu8mek0yff" path="res://Assets/Images/Obstacles/cat/scared/jump.png" id="17_we07o"]
+[ext_resource type="Texture2D" uid="uid://fwjapst52bf4" path="res://Assets/Images/Obstacles/cat/scared/s2.png" id="18_6ommw"]
+[ext_resource type="Texture2D" uid="uid://c6yxtk5hhqfxo" path="res://Assets/Images/Obstacles/cat/scared/s1.png" id="19_okyrq"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_s1m1f"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_tx7do")
-}],
-"loop": true,
-"name": &"pac2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_h5evr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_utt6t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_4bbhq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_km647")
-}, {
-"duration": 1.0,
-"texture": ExtResource("103_ugmlc")
-}],
-"loop": true,
-"name": &"pac3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("135_7dr6j")
-}],
-"loop": true,
-"name": &"scared",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("135_ho25g")
-}],
-"loop": true,
-"name": &"sleep",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_rbkpj"]
+resource_name = "sleep"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_vl8xc")]
+}
 
-[node name="cat_obs" type="Node2D"]
+[sub_resource type="Animation" id="Animation_0fl53"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_vl8xc")]
+}
+
+[sub_resource type="Animation" id="Animation_e8bgj"]
+resource_name = "wake_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_g3jjy")]
+}
+
+[sub_resource type="Animation" id="Animation_shtry"]
+resource_name = "awoken"
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("12_bimxh"), ExtResource("13_djk5t")]
+}
+
+[sub_resource type="Animation" id="Animation_b42bi"]
+resource_name = "touching"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.9, 1.5, 1.9, 2.5, 2.8, 3.3, 3.8, 4, 4.3, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2"), ExtResource("14_wm15y"), ExtResource("15_05rtr"), ExtResource("14_wm15y"), ExtResource("16_uqli2")]
+}
+
+[sub_resource type="Animation" id="Animation_34wsa"]
+resource_name = "jump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_we07o")]
+}
+
+[sub_resource type="Animation" id="Animation_2ae33"]
+resource_name = "scared"
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("18_6ommw"), ExtResource("19_okyrq")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfous"]
+_data = {
+"RESET": SubResource("Animation_0fl53"),
+"awoken": SubResource("Animation_shtry"),
+"jump": SubResource("Animation_34wsa"),
+"scared": SubResource("Animation_2ae33"),
+"sleep": SubResource("Animation_rbkpj"),
+"touching": SubResource("Animation_b42bi"),
+"wake_up": SubResource("Animation_e8bgj")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jcfmf"]
+animation = &"awoken"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ciwep"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jcfmf")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_226ql"]
+animation = &"scared"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_14wcp"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_226ql")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8i773"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_1n22d"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_8i773")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d43lp"]
+animation = &"sleep"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_f4nlw"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_d43lp")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ok0vt"]
+animation = &"touching"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ur05v"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_ok0vt")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hicmx"]
+animation = &"wake_up"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_k07g0"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_hicmx")
+blend_point_0/pos = 0.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k5iiw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yru1r"]
+advance_mode = 2
+advance_expression = "state == LOOKING"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x8uu6"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4qrws"]
+advance_mode = 2
+advance_expression = "state == SLEEP"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k2m5j"]
+advance_mode = 2
+advance_expression = "state == TOUCHING"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hb6kw"]
+advance_mode = 2
+advance_expression = "state == SCARED"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eiorl"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_icunf"]
+advance_mode = 2
+advance_expression = "state == SLEEP"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_13b53"]
+advance_mode = 2
+advance_expression = "state == SLEEP"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_igaqe"]
+advance_mode = 2
+advance_expression = "state == SLEEP"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xs2ti"]
+states/Awoken/node = SubResource("AnimationNodeBlendSpace1D_ciwep")
+states/Awoken/position = Vector2(425, 71)
+states/End/position = Vector2(1019, 120)
+states/Guilty/node = SubResource("AnimationNodeBlendSpace1D_14wcp")
+states/Guilty/position = Vector2(849, 71)
+states/Jump/node = SubResource("AnimationNodeBlendSpace1D_1n22d")
+states/Jump/position = Vector2(713, 71)
+states/Sleep/node = SubResource("AnimationNodeBlendSpace1D_f4nlw")
+states/Sleep/position = Vector2(597, -55)
+states/Start/position = Vector2(72, -55)
+states/Touch/node = SubResource("AnimationNodeBlendSpace1D_ur05v")
+states/Touch/position = Vector2(588, 71)
+states/Wake/node = SubResource("AnimationNodeBlendSpace1D_k07g0")
+states/Wake/position = Vector2(256, 71)
+transitions = ["Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_k5iiw"), "Sleep", "Wake", SubResource("AnimationNodeStateMachineTransition_yru1r"), "Wake", "Awoken", SubResource("AnimationNodeStateMachineTransition_x8uu6"), "Awoken", "Sleep", SubResource("AnimationNodeStateMachineTransition_4qrws"), "Awoken", "Touch", SubResource("AnimationNodeStateMachineTransition_k2m5j"), "Touch", "Jump", SubResource("AnimationNodeStateMachineTransition_hb6kw"), "Jump", "Guilty", SubResource("AnimationNodeStateMachineTransition_eiorl"), "Touch", "Sleep", SubResource("AnimationNodeStateMachineTransition_icunf"), "Jump", "Sleep", SubResource("AnimationNodeStateMachineTransition_13b53"), "Guilty", "Sleep", SubResource("AnimationNodeStateMachineTransition_igaqe")]
+graph_offset = Vector2(12, -103)
+
+[node name="Cat" type="Node2D"]
 script = ExtResource("1_53dp2")
 
 [node name="MischiefTimer" type="Timer" parent="."]
@@ -68,12 +252,28 @@ one_shot = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(1511, 573, 1505, 589, 1498, 616, 1504, 638, 1585, 643, 1638, 648, 1656, 622, 1660, 608, 1682, 585, 1665, 526, 1643, 482, 1603, 482, 1572, 489, 1560, 533, 1525, 550)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="CatAnimatedSprite" type="AnimatedSprite2D" parent="Sprite2D"]
-sprite_frames = SubResource("SpriteFrames_s1m1f")
-animation = &"pac3"
+[node name="CatSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_vl8xc")
 centered = false
+
+[node name="CatAnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CatSprite")
+libraries = {
+"": SubResource("AnimationLibrary_wfous")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_xs2ti")
+anim_player = NodePath("../CatAnimationPlayer")
+advance_expression_base_node = NodePath("..")
+parameters/Awoken/blend_position = 0
+parameters/Guilty/blend_position = 0
+parameters/Jump/blend_position = 0
+parameters/Sleep/blend_position = 0
+parameters/Touch/blend_position = 0
+parameters/Wake/blend_position = 0
+
+[node name="TV" parent="." instance=ExtResource("12_erf8s")]
 
 [connection signal="timeout" from="MischiefTimer" to="." method="_on_mischief_timer_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

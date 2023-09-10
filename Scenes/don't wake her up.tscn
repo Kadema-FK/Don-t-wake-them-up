@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://mlhgidq1ow1b"]
 
 [ext_resource type="Script" path="res://Scripts/don't wake her up.gd" id="1_yr7un"]
-[ext_resource type="Texture2D" uid="uid://bg4m4qiu0lj2t" path="res://Assets/Images/Background/plansza_empty_sketch.png" id="2_jqufn"]
+[ext_resource type="Texture2D" uid="uid://cx1pgm5inrct4" path="res://Assets/Images/Background/background.jpg" id="2_824x6"]
 [ext_resource type="PackedScene" uid="uid://cwkx4xqfoj1tr" path="res://Scenes/window_obs.tscn" id="3_ecayh"]
 [ext_resource type="Texture2D" uid="uid://con40ybx8212b" path="res://Assets/Images/Background/plansza_SKETCH.png" id="3_hjj7f"]
 [ext_resource type="PackedScene" uid="uid://dxpxwij74ak1r" path="res://Scenes/boogeyman_obs.tscn" id="4_yshmp"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bmnkyni2tl0cn" path="res://Scenes/cat_obs.tscn" id="5_tt8u4"]
 [ext_resource type="PackedScene" uid="uid://dcahcyergbd8v" path="res://Scenes/clock_obs.tscn" id="6_mof2p"]
 [ext_resource type="PackedScene" uid="uid://dcm8ea0tvnfv6" path="res://Scenes/dog_obs.tscn" id="7_qgjty"]
-[ext_resource type="PackedScene" path="res://Scenes/baby.tscn" id="10_kh5fo"]
+[ext_resource type="PackedScene" uid="uid://0cyup0d71qm2" path="res://Scenes/baby.tscn" id="10_kh5fo"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -17,7 +17,7 @@ script = ExtResource("1_yr7un")
 
 [node name="PlanszaEmptySketch" type="Sprite2D" parent="."]
 process_mode = 1
-texture = ExtResource("2_jqufn")
+texture = ExtResource("2_824x6")
 centered = false
 
 [node name="PlanszaSketch" type="Sprite2D" parent="."]

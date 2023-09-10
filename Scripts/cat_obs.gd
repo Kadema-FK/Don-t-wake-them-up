@@ -8,12 +8,13 @@ const time = 5;
 
 enum {SLEEP, LOOKING, TOUCHING, SCARED}
 
-@onready var catAnimatedSprite = $Sprite2D/CatAnimatedSprite;
+#@onready var catAnimatedSprite = $Sprite2D/CatAnimatedSprite;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	catAnimatedSprite.play("sleep");
-	#start();
+	$AnimationTree.active = true;
+#	catAnimatedSprite.play("sleep");
+	start();
 	pass # Replace with function body.
 
 
@@ -25,24 +26,25 @@ func start():
 	print("Cat starts");
 	#isDoingMischief = true;
 	state = LOOKING;
-	catAnimatedSprite.play("pac2");
+#	catAnimatedSprite.play("pac2");
 	$MischiefTimer.start(time);
 	pass
 
 
 func _on_mischief_timer_timeout():
 	if state == LOOKING:
-		catAnimatedSprite.play("pac3");
+#		catAnimatedSprite.play("pac3");
 		state = TOUCHING
 		$MischiefTimer.start(time);
 	elif state == TOUCHING:
 		noise_level = 10;
+		$TV.turnOnTV();
 		state = SCARED;
 		$MischiefTimer.start(time);
 	elif state == SCARED:
 		state = SLEEP;
 		noise_level = 0;
-		catAnimatedSprite.play("sleep");
+#		catAnimatedSprite.play("sleep");
 		
 	pass # Replace with function body.
 
@@ -53,7 +55,7 @@ func _input(event):
 			print("State: ", state)
 			if state >= LOOKING:
 				state = SLEEP;
-				catAnimatedSprite.play("sleep");
+#				catAnimatedSprite.play("sleep");
 				noise_level = 0;
 				$MischiefTimer.stop()
 
@@ -62,3 +64,6 @@ func _on_area_2d_mouse_entered():
 
 func _on_area_2d_mouse_exited():
 	mouse_in = false;
+
+func get_noise_level():
+	return $TV.get_noise_level();

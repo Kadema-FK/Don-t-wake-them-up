@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8u8kexox4e8a"]
+
+[ext_resource type="Script" path="res://Scripts/tv.gd" id="1_sk7ip"]
+[ext_resource type="Texture2D" uid="uid://dfd5wyrp26iod" path="res://Assets/Images/Obstacles/tv/t1.png" id="2_jfmia"]
+[ext_resource type="Texture2D" uid="uid://cb3wqa6smgpns" path="res://Assets/Images/Obstacles/tv/t2.png" id="3_sps3s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irmw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jfmia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sps3s")
+}],
+"loop": true,
+"name": &"tv_on",
+"speed": 5.0
+}]
+
+[node name="TV" type="Node2D"]
+script = ExtResource("1_sk7ip")
+
+[node name="Screen" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_irmw8")
+animation = &"tv_on"
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(145, 497, 149, 721, 339, 685, 342, 491)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
