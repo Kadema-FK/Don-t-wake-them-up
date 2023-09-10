@@ -71,6 +71,8 @@ func _on_pause_popup_close_pressed():
 	get_tree().paused = false
 
 func _input(event):
+	if $Cat.mouse_in: $Window.catSelected = true;
+	else:  $Window.catSelected = false;
 	if Input.is_action_just_pressed("pause"):
 		if pause == false:
 			pause = true

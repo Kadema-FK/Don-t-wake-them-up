@@ -4,6 +4,7 @@ var state = 4
 var open = true
 var noise_level = 0
 var hot_level = 0
+@export var catSelected = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,18 +16,19 @@ func _process(delta):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in == true:
-			print("Open: ", open)
-			if open == true:
-				open = false
-				$AnimatedSprite2D.play("closed")
-				$window_sound.play()
-				$AudioStreamPlayer.volume_db = -20
-			elif open == false:
-				open = true
-				$window_sound.play()
-				$AudioStreamPlayer.volume_db = 0
-				$AnimatedSprite2D.play("open")
+		if catSelected == false:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in == true:
+				print("Open: ", open)
+				if open == true:
+					open = false
+					$AnimatedSprite2D.play("closed")
+					$window_sound.play()
+					$AudioStreamPlayer.volume_db = -20
+				elif open == false:
+					open = true
+					$window_sound.play()
+					$AudioStreamPlayer.volume_db = 0
+					$AnimatedSprite2D.play("open")
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;
