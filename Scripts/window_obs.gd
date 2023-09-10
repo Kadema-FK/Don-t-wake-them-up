@@ -79,6 +79,7 @@ func _on_temp_timer_timeout():
 		$Termometer.play("normal")
 	if hot_level == 2:
 		$Termometer.play("warm")
+		noise_level = 0
 	if hot_level == 3:
 		$Termometer.play("hot")
 		noise_level = 10

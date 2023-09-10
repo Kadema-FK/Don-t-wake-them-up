@@ -1,152 +1,89 @@
-[gd_scene load_steps=32 format=3 uid="uid://dcm8ea0tvnfv6"]
+[gd_scene load_steps=10 format=3 uid="uid://dcm8ea0tvnfv6"]
 
 [ext_resource type="Script" path="res://Scripts/dog_obs.gd" id="1_7lyy7"]
-[ext_resource type="Texture2D" uid="uid://bmr5vuhgexg6m" path="res://Assets/Images/Obstacles/dog.png" id="2_5sgl7"]
+[ext_resource type="Texture2D" uid="uid://3vfeccavnf52" path="res://Assets/Images/Obstacles/dog/Luna_1.png" id="2_3x028"]
+[ext_resource type="Texture2D" uid="uid://nrqlxh6vxfst" path="res://Assets/Images/Obstacles/dog/Luna_2.png" id="3_cqkhq"]
+[ext_resource type="Texture2D" uid="uid://bfhvmkocjaiu3" path="res://Assets/Images/Obstacles/dog/bowl.png" id="4_5jfe5"]
+[ext_resource type="Texture2D" uid="uid://buykwgh7k1ske" path="res://Assets/Images/Obstacles/dog/Luna_4.png" id="4_hlbus"]
+[ext_resource type="Texture2D" uid="uid://b2wmit7hctm6h" path="res://Assets/Images/Obstacles/dog/Luna_3_0.png" id="5_6vpl0"]
+[ext_resource type="Texture2D" uid="uid://dyjpjn8uu3au1" path="res://Assets/Images/Obstacles/dog/dog_food.png" id="5_pk14f"]
+[ext_resource type="Texture2D" uid="uid://c6o5fxqs55v8r" path="res://Assets/Images/Obstacles/dog/Luna_3_1.png" id="6_1svwv"]
 
-[sub_resource type="Animation" id="Animation_uqe1s"]
-resource_name = "0"
-
-[sub_resource type="Animation" id="Animation_bmf3p"]
-resource_name = "1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_t288u"]
-resource_name = "2"
-
-[sub_resource type="Animation" id="Animation_5ggdp"]
-resource_name = "3"
-
-[sub_resource type="Animation" id="Animation_rwq5f"]
-resource_name = "4"
-
-[sub_resource type="Animation" id="Animation_yyoft"]
-resource_name = "5"
-
-[sub_resource type="Animation" id="Animation_sdl7q"]
-resource_name = "6"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l47m7"]
-_data = {
-"0": SubResource("Animation_uqe1s"),
-"1": SubResource("Animation_bmf3p"),
-"2": SubResource("Animation_t288u"),
-"3": SubResource("Animation_5ggdp"),
-"4": SubResource("Animation_rwq5f"),
-"5": SubResource("Animation_yyoft"),
-"6": SubResource("Animation_sdl7q")
-}
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7ttqj"]
-animation = &"0"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5ml5u"]
-animation = &"1"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gl07x"]
-animation = &"2"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n1aft"]
-animation = &"3"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8m2y8"]
-animation = &"4"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6nw45"]
-animation = &"5"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_phxx1"]
-animation = &"6"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e26sq"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8x0g0"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w3rvf"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_agu5l"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2p0wk"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c2g64"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_keef5"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ftsla"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7bv2x"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fbhq2"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mw0df"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fhjkl"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p6jcg"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n8qj5"]
-states/0/node = SubResource("AnimationNodeAnimation_7ttqj")
-states/0/position = Vector2(205, 99)
-states/1/node = SubResource("AnimationNodeAnimation_5ml5u")
-states/1/position = Vector2(205, 5)
-states/2/node = SubResource("AnimationNodeAnimation_gl07x")
-states/2/position = Vector2(301, 5)
-states/3/node = SubResource("AnimationNodeAnimation_n1aft")
-states/3/position = Vector2(368, 74)
-states/4/node = SubResource("AnimationNodeAnimation_8m2y8")
-states/4/position = Vector2(205, 194)
-states/5/node = SubResource("AnimationNodeAnimation_6nw45")
-states/5/position = Vector2(301, 194)
-states/6/node = SubResource("AnimationNodeAnimation_phxx1")
-states/6/position = Vector2(368, 143)
-states/Start/position = Vector2(88, 100)
-transitions = ["Start", "0", SubResource("AnimationNodeStateMachineTransition_e26sq"), "0", "1", SubResource("AnimationNodeStateMachineTransition_8x0g0"), "1", "2", SubResource("AnimationNodeStateMachineTransition_w3rvf"), "2", "3", SubResource("AnimationNodeStateMachineTransition_agu5l"), "3", "0", SubResource("AnimationNodeStateMachineTransition_2p0wk"), "0", "4", SubResource("AnimationNodeStateMachineTransition_c2g64"), "4", "5", SubResource("AnimationNodeStateMachineTransition_keef5"), "5", "6", SubResource("AnimationNodeStateMachineTransition_ftsla"), "6", "0", SubResource("AnimationNodeStateMachineTransition_7bv2x"), "4", "0", SubResource("AnimationNodeStateMachineTransition_fbhq2"), "5", "0", SubResource("AnimationNodeStateMachineTransition_mw0df"), "1", "0", SubResource("AnimationNodeStateMachineTransition_fhjkl"), "2", "0", SubResource("AnimationNodeStateMachineTransition_p6jcg")]
-graph_offset = Vector2(-415, -28)
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpecv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3x028")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cqkhq")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6vpl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1svwv")
+}],
+"loop": true,
+"name": &"3",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hlbus")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
 
 [node name="dog_obs" type="Node2D"]
 script = ExtResource("1_7lyy7")
 
-[node name="Dog" type="Sprite2D" parent="."]
-position = Vector2(94, 56)
-texture = ExtResource("2_5sgl7")
+[node name="Bowl" type="Sprite2D" parent="."]
+texture = ExtResource("4_5jfe5")
+centered = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Dog"]
-libraries = {
-"": SubResource("AnimationLibrary_l47m7")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="Dog"]
-tree_root = SubResource("AnimationNodeStateMachine_n8qj5")
-anim_player = NodePath("../AnimationPlayer")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lpecv")
+animation = &"1"
+frame_progress = 0.80691
+centered = false
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(94, 56)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-37, -14, -56, -6, -65, 12, -64, 26, -46, 37, -20, 41, -8, 32, 14, 32, 23, 33, 25, 26, 33, 24, 43, 28, 47, 33, 60, 29, 64, 35, 70, 33, 71, 19, 61, 14, 70, 8, 76, 11, 78, -1, 66, -13, 65, -30, 49, -31, 46, -21, 28, -27, 18, -22, -2, -25, -16, -22, -26, -19)
+[node name="food_polygon" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(554, 527, 537, 517, 554, 449, 619, 463, 613, 485, 621, 526, 583, 530)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="DogFood" type="Sprite2D" parent="."]
+position = Vector2(673, 547)
+texture = ExtResource("5_pk14f")
+
+[node name="bowl_area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bowl_area"]
+polygon = PackedVector2Array(561, 671, 544, 713, 550, 747, 587, 768, 638, 768, 678, 754, 695, 717, 675, 679, 617, 663)
+
+[node name="dog_back" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="bowl_area" to="." method="_on_bowl_area_mouse_entered"]
+[connection signal="mouse_exited" from="bowl_area" to="." method="_on_bowl_area_mouse_exited"]
+[connection signal="timeout" from="dog_back" to="." method="_on_dog_back_timeout"]
