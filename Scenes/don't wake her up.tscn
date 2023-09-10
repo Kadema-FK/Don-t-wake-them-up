@@ -55,8 +55,6 @@ process_mode = 1
 position = Vector2(845, 383)
 
 [node name="Dog" parent="." instance=ExtResource("7_qgjty")]
-process_mode = 1
-position = Vector2(733, 920)
 
 [node name="Baby" parent="." instance=ExtResource("10_kh5fo")]
 

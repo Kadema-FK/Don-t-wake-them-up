@@ -24,11 +24,14 @@ func _input(event):
 					$AnimatedSprite2D.play("closed")
 					$window_sound.play()
 					$AudioStreamPlayer.volume_db = -20
+					noise_level = 0
 				elif open == false:
 					open = true
 					$window_sound.play()
 					$AudioStreamPlayer.volume_db = 0
 					$AnimatedSprite2D.play("open")
+					if state == 3:
+						noise_level = 10
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;
@@ -79,6 +82,7 @@ func _on_temp_timer_timeout():
 		$Termometer.play("normal")
 	if hot_level == 2:
 		$Termometer.play("warm")
+		noise_level = 0
 	if hot_level == 3:
 		$Termometer.play("hot")
 		noise_level = 10
