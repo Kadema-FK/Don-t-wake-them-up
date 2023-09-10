@@ -5,6 +5,7 @@ const eventTimeMinMax = [[5,8], [4,7], [3,6]]
 var eventsInHour0 = [0,0];
 var hour = 0;
 const sInHour = 20;
+var calmingEffect = 5;
 @onready var obstacles = [$Cat, $Dog, $Window, $Boogeyman];
 var pause = false
 
@@ -24,6 +25,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var i: int = 0;
+	var noise = 0;
+	while i < obstacles.size():
+		noise += obstacles[i].get_noise_level();
+		i += 1;
+	if $Baby.noiseLevel > 0:
+		noise -= calmingEffect;
+	$Baby.noiseLevel += noise * delta;
 	pass;
 
 func resetEventTimer(start, end):

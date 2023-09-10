@@ -3,7 +3,7 @@ var mouse_in = false
 var state = 0
 var noise_level = 0
 
-#var isDoingMischief: bool = false;
+var isDoingMischief: bool = false;
 const time = 5;
 
 enum {SLEEP, LOOKING, TOUCHING, SCARED}
@@ -14,7 +14,7 @@ enum {SLEEP, LOOKING, TOUCHING, SCARED}
 func _ready():
 	$AnimationTree.active = true;
 #	catAnimatedSprite.play("sleep");
-	start();
+	#start();
 	pass # Replace with function body.
 
 
@@ -23,11 +23,13 @@ func _process(delta):
 	pass
 
 func start():
-	print("Cat starts");
-	#isDoingMischief = true;
-	state = LOOKING;
-#	catAnimatedSprite.play("pac2");
-	$MischiefTimer.start(time);
+	if isDoingMischief == false:
+		print("Cat starts");
+		#isDoingMischief = true;
+		state = LOOKING;
+		isDoingMischief = true;
+	#	catAnimatedSprite.play("pac2");
+		$MischiefTimer.start(time);
 	pass
 
 
@@ -43,6 +45,7 @@ func _on_mischief_timer_timeout():
 		$MischiefTimer.start(time);
 	elif state == SCARED:
 		state = SLEEP;
+		isDoingMischief = true;
 		noise_level = 0;
 #		catAnimatedSprite.play("sleep");
 		
@@ -55,6 +58,7 @@ func _input(event):
 			print("State: ", state)
 			if state >= LOOKING:
 				state = SLEEP;
+				isDoingMischief = false;
 #				catAnimatedSprite.play("sleep");
 				noise_level = 0;
 				$MischiefTimer.stop()
