@@ -27,6 +27,7 @@ func _input(event):
 				noise_level = 0
 				$Timer.stop()
 				$dog_back.start()
+				$dog_bark.stop()
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;
@@ -53,6 +54,7 @@ func _on_timer_timeout():
 	if state == 4:
 		$AnimatedSprite2D.play("3")
 		noise_level = 10
+		$dog_bark.play()
 		
 
 
