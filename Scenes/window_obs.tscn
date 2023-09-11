@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://8qn0njirmofb" path="res://Assets/Images/Obstacles/window/okno_open_blue_soft.png" id="4_1u2wb"]
 [ext_resource type="Texture2D" uid="uid://beot02saldfi2" path="res://Assets/Images/Obstacles/window/okno_closed_red_big.png" id="4_tgb2f"]
 [ext_resource type="Texture2D" uid="uid://5ui7tqaqo8e5" path="res://Assets/Images/Obstacles/window/weewoo.png" id="5_0iwuh"]
-[ext_resource type="Texture2D" uid="uid://dx53nhj25saw6" path="res://Assets/Images/Obstacles/window/termometer/hot_temp.png" id="5_5jlmx"]
 [ext_resource type="Texture2D" uid="uid://ceojko1ni0iq3" path="res://Assets/Images/Obstacles/window/okno_open_red_soft.png" id="5_snf1i"]
 [ext_resource type="Texture2D" uid="uid://bkm23cdthj0bk" path="res://Assets/Images/Obstacles/window/termometer/normal_temp.png" id="6_d046c"]
 [ext_resource type="Texture2D" uid="uid://vvqtysput0ld" path="res://Assets/Images/Obstacles/window/okno_closed_blue_soft.png" id="6_dwy7j"]
@@ -17,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cxkr1m4wxoqm2" path="res://Assets/Sounds/Ambulance Sound Effect.mp3" id="8_18whg"]
 [ext_resource type="Texture2D" uid="uid://bu1pyfij1wx1n" path="res://Assets/Images/Obstacles/window/okno_open_red_big.png" id="8_je3we"]
 [ext_resource type="AudioStream" uid="uid://bpikgb4lwpx3w" path="res://Assets/Sounds/slide_window.mp3" id="9_hqcp6"]
+[ext_resource type="Texture2D" uid="uid://da48pyecfhvg0" path="res://Assets/Images/Obstacles/window/termometer/hot_temp1.png" id="14_mwogx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dls04"]
 animations = [{
@@ -84,12 +84,12 @@ animations = [{
 [sub_resource type="SpriteFrames" id="SpriteFrames_rdgpx"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_5jlmx")
+"duration": 1.2,
+"texture": ExtResource("14_mwogx")
 }],
 "loop": true,
 "name": &"hot",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -134,6 +134,7 @@ texture = ExtResource("5_0iwuh")
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_rdgpx")
 animation = &"normal"
+frame_progress = 0.0439728
 
 [node name="temp_timer" type="Timer" parent="."]
 wait_time = 5.0

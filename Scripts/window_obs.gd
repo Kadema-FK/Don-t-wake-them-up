@@ -71,11 +71,12 @@ func _on_timer_timeout():
 			$AnimatedSprite2D.play("closed_wewo")
 	if state == 3 and open == true:
 		$AudioStreamPlayer.play()
-		if open == true:
-			$AnimatedSprite2D.play("open_big_wewo")
-		if open == false:
-			$AnimatedSprite2D.play("closed_big_wewo")
+		$AnimatedSprite2D.play("open_big_wewo")
 		noise_level = 10
+	elif state == 3 and open == false:
+		$AudioStreamPlayer.play()
+		noise_level = 10
+		$AnimatedSprite2D.play("closed_big_wewo")
 	if state >= 4:
 		noise_level = 0
 		$AudioStreamPlayer.stop()

@@ -1,5 +1,6 @@
 extends Node
 var mouse_in = false
+var mouse_in_cube = false
 var torch_active = false
 var state = 0
 var noise_level = 0
@@ -29,6 +30,8 @@ func _input(event):
 			$TorchAcive.visible = false
 			$Torch.visible = true
 			print("Torch is active: ", torch_active)
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and mouse_in_cube== true:
+			$AnimatedSprite2D.play("1")
 
 func _on_area_2d_mouse_entered():
 	mouse_in = true;
@@ -81,3 +84,11 @@ func _on_boogy_run_timeout():
 
 func get_noise_level():
 	return noise_level;
+
+
+func _on_cube_mouse_entered():
+	mouse_in_cube = true
+
+
+func _on_cube_mouse_exited():
+	mouse_in_cube = false
